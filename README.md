@@ -15,20 +15,20 @@ Program ini bekerja dalam beberapa langkah sederhana untuk menghitung selisih ha
 deadline: Dibuat berdasarkan variabel targetTahun, targetBulan, dan targetHari yang Anda atur. Ini adalah target waktu di masa depan.
 now: Dibuat menggunakan DateTime.now(), yang menangkap waktu tepat saat ini (termasuk jam, menit, dan detik).
 
-2.Normalisasi Tanggal (Langkah Kunci) Untuk menghitung selisih hari dengan adil, kita tidak peduli dengan jam atau menitnya. Kita hanya ingin membandingkan "tanggal" vs "tanggal".
+2. Normalisasi Tanggal (Langkah Kunci) Untuk menghitung selisih hari dengan adil, kita tidak peduli dengan jam atau menitnya. Kita hanya ingin membandingkan "tanggal" vs "tanggal".
 Oleh karena itu, kita membuat objek DateTime ketiga bernama today.
 today dibuat hanya menggunakan now.year, now.month, dan now.day. Ini secara efektif mengatur waktu "hari ini" ke pukul 00:00 (tengah malam).
 Ini memastikan perbandingan yang adil (apel-lawan-apel) dengan deadline, yang juga diatur pada pukul 00:00.
 
-3.Menghitung Selisih (Duration)
+3. Menghitung Selisih (Duration)
 Program ini menggunakan metode deadline.difference(today).
 Perhitungan ini mengembalikan sebuah objek Duration (Durasi), yang menyimpan selisih waktu antara dua tanggal tersebut.
 
-4.Mendapatkan Total Hari (.inDays)
+4. Mendapatkan Total Hari (.inDays)
 Objek Duration memiliki properti .inDays. Properti ini secara cerdas mengekstrak selisih waktu hanya dalam hitungan hari (dibulatkan ke bawah).
 Hasil dari selisih.inDays adalah sebuah angka (int) yang bisa positif (deadline di masa depan), nol (deadline hari ini), atau negatif (deadline sudah lewat).
 
-5.Logika if/else (Menampilkan Hasil)
+5. Logika if/else (Menampilkan Hasil)
 Program kemudian memeriksa nilai sisaHari tersebut:
 Jika sisaHari > 0 (positif), program mencetak pesan "Sisa ... HARI LAGI".
 Jika sisaHari == 0 (nol), program mencetak pesan "Batasnya adalah HARI INI!".
