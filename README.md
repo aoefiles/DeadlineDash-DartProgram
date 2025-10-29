@@ -1,14 +1,14 @@
 # Deadline Dash - Penghitung Mundur Deadline Sederhana
 Ini adalah program konsol (terminal) sederhana yang ditulis dalam bahasa Dart. Program ini bertujuan untuk menghitung sisa hari dari tanggal hari ini ke tanggal deadline yang telah ditentukan di dalam kode.
 
-##🌟 Fitur Utama
+## 🌟 Fitur Utama
 Hitung Mundur: Menghitung jumlah hari tersisa secara akurat.
 Status Dinamis: Memberikan output yang berbeda-beda tergantung situasinya:
 - Masih ada sisa waktu.
 - Deadline adalah hari ini.
 - Deadline sudah terlewat.
 
-##🧠 Penjelasan Logika Program
+## 🧠 Penjelasan Logika Program
 Program ini bekerja dalam beberapa langkah sederhana untuk menghitung selisih hari:
 
 1. Inisialisasi DateTime: Program ini membuat dua objek DateTime utama:
